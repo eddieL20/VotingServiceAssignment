@@ -3,7 +3,7 @@ package votingservice;
 import java.util.Set;
 
 public interface IVotingService {
-    static final int CHAR_BIAS = 65;
+    int CHAR_BIAS = 65;
     void isSingleAnswer(boolean questionType);
 
     void setQuestion(String question);

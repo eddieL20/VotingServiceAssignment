@@ -27,13 +27,16 @@ public class SimulationDriver {
             // Checks if the current VotingService is a Single Choice Question
             if(vService.getQuestion() instanceof SingleChoiceQuestion){
                 vService.displayQuestion();
+                String studentID;
 
                 for (int i = 0; i < numOfStudents; i++) {
                     int answerNum = random.nextInt(4);
                     char answerChar = (char) (answerNum + 65);
                     Student student = new Student();
                     student.setSingleAnswer(answerChar);
-                    student.setStudentID(i);
+
+                    studentID = String.valueOf(i);
+                    student.setStudentID(studentID);
                     vService.acceptStudentSubmission(student);
                 }
                 vService.displayStats();
@@ -49,9 +52,7 @@ public class SimulationDriver {
                 vService.displayStats();
             }
 
-
     }
-
 
 }
     public static char[] populateMultipleAnswers(int totalNum){
