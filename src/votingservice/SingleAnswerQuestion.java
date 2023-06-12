@@ -1,5 +1,8 @@
 package votingservice;
-public class SingleChoiceQuestion extends Question {
+public class SingleAnswerQuestion extends Question {
+
+    // This method is different from the Multiple Answer Question
+    // It displays to select only one answer
     @Override
     public void displayQuestion() {
         System.out.println("=====================================");

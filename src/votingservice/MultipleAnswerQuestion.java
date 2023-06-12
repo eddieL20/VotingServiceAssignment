@@ -1,6 +1,7 @@
 package votingservice;
 
-public class MultipleChoiceQuestion extends Question {
+public class MultipleAnswerQuestion extends Question {
+    // this method is different from the Single Answer Question, it displays to select multiple answers
     @Override
     public void displayQuestion() {
         System.out.println("==============================");
